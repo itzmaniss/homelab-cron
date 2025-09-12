@@ -2,8 +2,7 @@ FROM oven/bun:1-slim
 
 WORKDIR /app
 
-COPY bun.lock ./
-COPY tsconfig.json ./
+COPY package.json bun.lock tsconfig.json ./
 
 RUN bun install --frozen-lockfile
 
